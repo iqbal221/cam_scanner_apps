@@ -1,7 +1,10 @@
+import 'package:cam_scanner/presentation/screens/camera_screen.dart';
 import 'package:flutter/material.dart';
 
 class HomeScreen extends StatefulWidget {
   const HomeScreen({super.key});
+
+  static const String name = '/home';
 
   @override
   State<HomeScreen> createState() => _HomeScreenState();
@@ -47,7 +50,9 @@ class _HomeScreenState extends State<HomeScreen> {
       ),
       floatingActionButton: FloatingActionButton(
         backgroundColor: const Color(0xFF29A8FF),
-        onPressed: () {},
+        onPressed: () {
+          Navigator.pushNamed(context, CameraScreen.name);
+        },
         child: Icon(Icons.camera_alt, size: 28),
       ),
     );
